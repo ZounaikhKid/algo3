@@ -1,0 +1,31 @@
+FUNCTION dot_product(VAR v1,v2 :  ARRAY_OF FLOAT): INTEGER
+VAR
+    a,i : INTEGER;
+    ps : FLOAT:;
+BEGIN
+    ps:= 0;
+    FOR i FROM 0 TO a-1 STEP 1  DO
+        ps:= ps + v1[i]*v2[i];
+    END_FOR
+    RETURN ps;
+END
+
+
+ALGORITHM Dot product
+VAR
+    a,i,j,n: INTEGER;
+    tab : ARRAY_OF INTEGER;
+    h: HASH_TABLE<INTEGER ,ARRAY_OF FLOAT>;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        h.insert(i,FOR j FROM 0 TO a STEP 1  DO Read(tab[j]);END_FOR)
+    END_FOR
+
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        FOR j FROM i+1 TO n-1 STEP 1  DO
+            IF (dot_product(t.get(i),t.get(j))=0) THEN
+                Write(t.get(i) + " and "t.get(j) + "are orthogonal")
+            END_IF 
+        END_FOR
+    END_FOR
+END
